@@ -7,9 +7,9 @@ Auxilium is a health emergency alert and help request system. It detects patient
 ![Technical Workflow](img/tech-flow.jpg)
 
 Different parts of the projects are:
-- [FitBit (patients' end)](https://github.com/Auxilium-Hacktech2019/Auxilium-Android)
+- [FitBit app](https://github.com/Auxilium-Hacktech2019/Auxilium-Android) (patients' end)
 - [Central server](https://github.com/Auxilium-Hacktech2019/Auxilium-Back)
-- [Android Client(AED Coordinators' end, this repository)](https://github.com/Auxilium-Hacktech2019/Auxilium-Android)
+- [Android app](https://github.com/Auxilium-Hacktech2019/Auxilium-Android) (AED Coordinators' end, this repository)
 
 ## Inspiration
 
