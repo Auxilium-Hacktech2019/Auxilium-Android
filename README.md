@@ -6,9 +6,14 @@ Auxilium is a health emergency alert and help request system. It detects patient
 
 ![Technical Workflow](img/tech-flow.jpg)
 
+Different parts of the projects are:
+- [FitBit (patients' end)](https://github.com/Auxilium-Hacktech2019/Auxilium-Android)
+- [Central server](https://github.com/Auxilium-Hacktech2019/Auxilium-Back)
+- [Android Client(AED Coordinators' end, this repository)](https://github.com/Auxilium-Hacktech2019/Auxilium-Android)
+
 ## Inspiration
 
-In recent years, news about the death of cardiac arrest has emerged one after another. According to AHA, there are more than 356,000 out-of-hospital cardiac arrests annually in the U.S. The loss of many fresh lives is due to the lack of timely assistance. If professional ambulance personnel can provide first-aid measures for cardiac resuscitation in patients during gold rescue time, this will save tens of thousands of lives.
+In recent years, news about the death of cardiac arrest has emerged one after another. According to AHA, there are more than 356,000 out-of-hospital cardiac arrests annually in the U.S. Loss of many fresh lives is due to the lack of timely assistance. If professional ambulance personnel can provide first-aid measures for cardiac resuscitation in patients during gold rescue time, this will save tens of thousands of lives.
 
 While the emergence of rideshare platform as Uber might provide new approaches for ambulance and first aid dispatching, we combine hardwares and softwares to develop a system which aims to help patients get timely aid.
 
@@ -23,20 +28,19 @@ Our ideal case is Uber has a special product choice for commercial ambulance dri
 
 ## How we built it
 
-We built a central server deployed on Google Cloud that receives alerts from patients and requests nearest AED coordinators and ambulances for them. The patients’ end, a FitBit app tracking user’s health data (e.g., heart rate), is developed with FitBit SDK in JavaScript for reporting an emergency when heart rate is below a specific value. Each reported emergency contains its location. When the server takes an emergency report, it assigns the emergency to the nearest AED coordinator with an alert message. Meanwhile, the system requests a ride from Uber, ideally it should be an ambulance. The server removes the emergency once the AED coordinator reports it as solved. On the AED coordinator end, an Android client keeps polling for emergencies. When nearby patients are in need, the app makes sound alarm and shows a map view as a Google Maps shortcut for navigation. The AED coordinator needs to long press the dismiss button to stop an alarm in case it is touched inadvertently.
-
+We built a central server deployed on Google Cloud that receives alerts from patients and requests nearest AED coordinators and ambulances for them. The patients’ end, a FitBit app tracking user’s health data (e.g., heart rate), is developed with FitBit SDK in JavaScript for reporting an emergency when heart rate is below a specific value. Each reported emergency contains its location. When the server takes an emergency report, it assigns the emergency to the nearest AED coordinator with an alert message. Meanwhile, the system requests a ride from Uber, which ideally should be an ambulance. The server removes the emergency once the AED coordinator reports it as solved. On the AED coordinator end, an Android client keeps polling for emergencies. When nearby patients are in need, the app makes sound alarm and shows a map view as a Google Maps shortcut for navigation. The AED coordinator needs to long press the dismiss button to stop an alarm in case it is touched inadvertently.
 
 ## Challenges we ran into
 
-FitBit watch is required for monitoring patients’ heart, detecting fatal attacks and request alerts to center server. With heart-rate API in FitBit SDK, it is available to obtain real-time heart-rate of patients and then to detect heart-rate attacks. Messaging API is used to send alerts including information of location detected by geolocation API. We finally built an app on FitBit watch with the two APIs for implementation.
+FitBit watch is required for monitoring patients’ heart, detecting fatal attacks and request alerts to center server. With heart-rate API in FitBit SDK, it is available to obtain real-time heart-rate of patients and then to detect heart-rate attacks. Messaging API is used to send alerts including information of location detected by geolocation API. We finally built an app on FitBit watch with these two APIs.
 
-The alert system requires a centralized server to manage all the data related to AED coordinator, patient accident location and Uber ride requests. Maintaining connections between AED coordinators personal device with server is a wasting of resources. Instead, we apply a solution similar to most instant message applications. The AED coordinator end app keeps polling server to figure out if a patient is assigned to him/her. We developed a mobile application designates to provide support for these actions.
+The alert system requires a central server to manage all the data related to AED coordinator, patient accident location and Uber ride requests. Maintaining connections between AED coordinators personal device with server is a wasting of resources. Instead, we apply a solution similar to most instant message applications. The AED coordinator end app keeps polling server to figure out if a patient is assigned to him/her. We developed a mobile application designates to provide support for these actions.
 
 Once the server received an incidence report, it searches for the nearest AED coordinator and location of hospital. It send to request a Uber ride, we used the Uber developer API. Our server figures out the start and end points for a ride according patient and hospital location and perform the request. The system is still making request using Uber personal account, but for deployment purpose, using a Uber Central account is more reasonable.
 
 ## Accomplishments that we are proud of
 
-Our system is able to timely inform the nearest AED coordinator of patient's position and request an uber ambulance to assist patient to be sent to hospital as soon as possible, which will greatly improve the survival rate of these patients.
+Our system is able to timely inform the nearest AED coordinator of patient's position and request an Uber ambulance to assist patient to be sent to hospital as soon as possible, which can greatly improve the survival rate of these patients.
 
 ## What we learned
 
@@ -57,6 +61,7 @@ In addition, since we could not modify data Uber has, we could only request a no
 We believe with all these future development, Auxilium will finally fulfill its destiny to save more lives.
 
 ## Built with
+
 - Python
 - Flask
 - MySQL
@@ -69,3 +74,7 @@ We believe with all these future development, Auxilium will finally fulfill its 
 - Google Cloud
 - Google Maps
 - Uber APIs
+
+## Team
+
+![Team](img/team.jpg)
