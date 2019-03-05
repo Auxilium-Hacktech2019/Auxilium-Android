@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Auxilium</string>
+
+    <string name="log_in">Log in as an AED</string>
+    <string name="action_log_in">Log in</string>
+    <string name="action_register">Register</string>
+    <string name="log_in_hint">Your AED name</string>
+
+    <string name="aed_info">Logged in as AED: %s</string>
+
+    <string name="title_safe">Safe</string>
+    <string name="title_sos">S.O.S.</string>
+
+    <string name="action_long_press_dismiss">Long Press to Dismiss</string>
+    <string name="long_press_dismiss_tip">Pleasee long press to dismiss after completing this AED aid. </string>
+
+    <string name="dismiss_caution_title">Caution</string>
+    <string name="dismiss_caution">Are you sure you wanted to dismiss this S.O.S.? </string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_cancel">Cancel</string>
+</resources>

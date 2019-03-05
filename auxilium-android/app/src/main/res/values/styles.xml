@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Title.Auxilium" parent="TextAppearance.AppCompat.Title">
+        <item name="android:colorPrimary">@color/textDark</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/exo2_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Title.Auxilium.Status" parent="TextAppearance.AppCompat.Title.Auxilium">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.3</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Button.Auxilium" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:paddingTop">@dimen/normal_gap</item>
+        <item name="android:paddingBottom">@dimen/normal_gap</item>
+        <item name="android:paddingStart">@dimen/big_gap</item>
+        <item name="android:paddingEnd">@dimen/big_gap</item>
+        <item name="android:fontFamily">@font/exo2_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Button.Auxilium.Inverse" parent="TextAppearance.AppCompat.Button.Auxilium">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Auxilium" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/textDark</item>
+        <item name="android:fontFamily">@font/exo2</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Auxilium.Info" parent="TextAppearance.AppCompat.Auxilium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/colorDisabled</item>
+        <item name="android:fontFamily">@font/exo2</item>
+    </style>
+
+</resources>
