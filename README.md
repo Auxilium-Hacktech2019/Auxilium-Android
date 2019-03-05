@@ -77,4 +77,4 @@ We believe with all these future development, Auxilium will finally fulfill its 
 
 ## Team
 
-![Team](img/team.jpg)
+![Team](img/team.jpeg)
